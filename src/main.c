@@ -6,16 +6,6 @@
 #include "utils.h"
 
 
-#define RED "\x1b[31m"
-#define RESET "\x1b[0m"
-#define YEL "\e[0;33m"
-#define BLU "\e[0;34m"
-#define WHTB "\e[47m"
-#define REDB "\e[41m"
-#define GRN "\e[0;32m"
-#define BHYEL "\e[1;93m"
-
-
 /*void getInput(void *input, char *type) {
     if (strcmp(type, "int") == 0) {
 	while (scanf("%d", (int *)input) != 1) {
@@ -36,15 +26,6 @@
     CLEAN_BUFFER();  
 }*/
 
-
-
-void printMenu(){
-    printf("Algorithm Visualizer\n");
-    printf("1. Binary search\n");
-    printf("2. Sorting algorithm\n");
-    printf("3. Quit\n");
-    printf("Select what would you like to do: ");
-}
 
 void mainLoop(){
     int menu;

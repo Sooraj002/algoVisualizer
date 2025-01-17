@@ -29,3 +29,13 @@ void arrManage(int len, int* arr){
 	dup--;
     }
 }
+
+void printMenu(){
+    printf("Algorithm Visualizer\n");
+    printf("1. Binary search\n");
+    printf("2. Sorting algorithm\n");
+    printf("3. Quit\n");
+    printf("Select what would you like to do: ");
+}
+
+
