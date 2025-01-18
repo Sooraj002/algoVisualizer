@@ -35,7 +35,7 @@ If you're on Linux or macOS, you can skip the Chocolatey step.
 After building the project using `make`, you can run the visualizer:
 
 ```bash
-./program
+make program
 ```
 
 
