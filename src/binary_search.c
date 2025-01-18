@@ -57,21 +57,7 @@ void binary_search(){
     CLEAN_SCREEN();
     int len, num;
 
-    printf("Enter the number of elements in the array: ");
-    scanf("%d", &len);
-
-    if(len == 0){
-	printError("Array length can't be Zero. Exiting the program...\n");
-	return;
-    }
-
-    int *arr = (int*) malloc(len * sizeof(int));
-    if(arr == NULL){
-	printError("Memory allocation failed...\n");
-	free(arr);
-	return;
-    }
-    arrManage(len, arr);
+    int* arr = arrManage(&len);
 
     printf("Enter the number to be searched in the array: ");
     scanf("%d", &num);

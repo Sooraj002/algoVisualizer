@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include "../include/binary_search.h"
+#include "../include/bubble_sort.h"
 #include "../include/utils.h"
 
 void mainLoop(){
@@ -21,11 +22,10 @@ void mainLoop(){
 
 	switch(menu){
 	    case 1:
-		printf("binary search\n");
 		binary_search();
 		break;
 	    case 2:
-		printf("sorting algorithm\n");
+		bubble_sort();
 		break;
 	    case 3:
 		printf("Exiting the program...\n");

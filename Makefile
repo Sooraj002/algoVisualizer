@@ -5,7 +5,7 @@ SRC_DIR = src
 INC_DIR = include
 BUILD_DIR = build
 
-SRCS = $(SRC_DIR)/main.c $(SRC_DIR)/binary_search.c $(SRC_DIR)/utils.c
+SRCS = $(SRC_DIR)/main.c $(SRC_DIR)/binary_search.c $(SRC_DIR)/utils.c $(SRC_DIR)/bubble_sort.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -18,6 +18,9 @@ $(EXEC):$(OBJS)
 
 $(SRC_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
+
+program: $(EXEC) 
+	./$(EXEC)
 
 clean:
 	rm -f $(SRC_DIR)/*.o $(EXEC)

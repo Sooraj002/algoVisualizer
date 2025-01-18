@@ -1,43 +1,46 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "../include/utils.h" 
 
 void bubble_visualizer(int* arr, int len, int cur) {
     for (int i = 0; i < len; i++) { 
-        if (cur == i || cur == i + 1) {
-            printf(BHYEL REDB" %d " RESET, arr[i]); 
-        } else {
-            printf(" %d ", arr[i]); 
-        }
+	if (cur == i ) {
+	    printf(BHRED BLKB" %d " RESET, arr[i]); 
+	} else if (i == cur + 1){
+	    printf(BHGRN BLKB" %d " RESET, arr[i]); 
+	} else {
+	    printf(" %d ", arr[i]); 
+	}
     }
     printf("\n");
     printf("Press enter for next step\n");
     getchar(); 
 }
 
-void bubble_sort(int* arr, int len) {
-    while (len > 1) { // Corrected loop condition
-        for (int i = 0; i < len - 1; i++) {
-            if (arr[i] > arr[i + 1]) {
-                int temp = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i + 1] = temp;
-                bubble_visualizer(arr, len, i); 
-            }
-        }
-        len--;
+void bubble_sort() {
+    CLEAN_SCREEN();
+    int len;
+    int* arr = arrManage(&len);
+    CLEAN_BUFFER();
+    int og = len;
+    while (len > 1) { 
+	for (int i = 0; i < len - 1; i++) {
+	    if (arr[i] > arr[i + 1]) {
+		int temp = arr[i];
+		arr[i] = arr[i + 1];
+		arr[i + 1] = temp;
+		bubble_visualizer(arr, og, i); 
+	    }
+	}
+	len--;
     }
 
-    printf("\nSorted array: ");
-    for (int i = 0; i < len; i++) {
-        printf("%d ", arr[i]);
+    printf("The array has been sorted:");
+    for (int i = 0; i < og; i++) {
+	printf("%d ", arr[i]);
     }
     printf("\n");
+    free(arr);
+    getchar();
 }
 
-int main() {
-    int arr[] = {64, 34, 25, 12, 22, 11, 90}; 
-    int len = sizeof(arr) / sizeof(arr[0]); 
-
-    bubble_sort(arr, len);
-    return 0;
-}

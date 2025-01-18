@@ -10,7 +10,9 @@
 #define REDB "\e[41m"
 #define GRN "\e[0;32m"
 #define BHYEL "\e[1;93m"
-
+#define BHRED "\e[1;91m"
+#define BHGRN "\e[1;92m"
+#define BLKB "\e[40m"
 
 
 void printWarning(const char* warning);
@@ -21,6 +23,6 @@ void printMenu();
 #define CLEAN_BUFFER() while (getchar() != '\n')
 #define CLEAN_SCREEN() printf("\033[2J\033[H")
 
-void arrManage(int len, int* arr);
+int* arrManage(int* len);
 
 #endif // UTILS_H
