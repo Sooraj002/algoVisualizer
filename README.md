@@ -16,7 +16,7 @@ A simple cli tool to visualize algorithm in cli
    choco install make
    ```
 
-2. Install `gcc` (if not already installed, you can use [minGW](https://sourceforge.net/projects/mingw/).
+2. Install `gcc` (if not already installed, you can use [minGW](https://sourceforge.net/projects/mingw/)).
 
 3. Clone this repository:
    ```bash
