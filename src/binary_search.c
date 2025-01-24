@@ -3,16 +3,6 @@
 #include "../include/utils.h"
 
 
-#define RED "\x1b[31m"
-#define RESET "\x1b[0m"
-#define YEL "\e[0;33m"
-#define BLU "\e[0;34m"
-#define WHTB "\e[47m"
-#define REDB "\e[41m"
-#define GRN "\e[0;32m"
-#define BHYEL "\e[1;93m"
-
-
 void binary_visualization(int len, int mid, int left, int right, int* arr){
     printf("Array Index:  ");
     for(int i = 0; i < len; i++){
@@ -26,12 +16,6 @@ void binary_visualization(int len, int mid, int left, int right, int* arr){
 	    printf(" %d ", i);
 	}
     }
-
-    for(int i = 0; i < len; i++){
-	printf("|");
-	printf("-");
-    }
-
 
     printf("\n");
 

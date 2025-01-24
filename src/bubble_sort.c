@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include "../include/utils.h" 
 
@@ -17,6 +18,17 @@ void bubble_visualizer(int* arr, int len, int cur) {
     getchar(); 
 }
 
+void bubble_hash(int*arr, int len){
+    for(int i = 0; i < len ; i++){
+	for(int j = 0; j < arr[i] ; j++){
+	    printf("#");
+	}
+	printf("\n");
+    }
+    sleep(2);
+    CLEAN_SCREEN();
+}
+
 void bubble_sort() {
     CLEAN_SCREEN();
     int len;
@@ -31,6 +43,7 @@ void bubble_sort() {
 		arr[i + 1] = temp;
 		bubble_visualizer(arr, og, i); 
 	    }
+	    //bubble_hash(arr, og);
 	}
 	len--;
     }
